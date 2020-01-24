@@ -13,7 +13,7 @@ import android.widget.Toolbar;
 
 import com.google.firebase.auth.FirebaseAuth;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     Toolbar toolbar;
     ProgressBar progressBar;
     EditText email;
@@ -34,9 +34,11 @@ public class MainActivity extends AppCompatActivity {
 
         firebaseAuth = FirebaseAuth.getInstance();
 
-    signup.setOnClickListener(view){
-        progressBar.setVisibility(View.VISIBLE);
-        firebaseAuth.createUserWithEmailAndPassword(email.getText().toString(),password.getText().toString()).addOnCompleteListener(task){
+    signup.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            progressBar.setVisibility(View.VISIBLE);
+            firebaseAuth.createUserWithEmailAndPassword(email.getText().toString(),password.getText().toString()).addOnCompleteListener(task){
             progressBar.setVisibility(View.GONE);
                 if(task.isSuccessful()){
                     Toast.makeText(MainActivity.this, "Registered successfully",Toast.LENGTH_LONG).show();
@@ -45,16 +47,19 @@ public class MainActivity extends AppCompatActivity {
                 }else{
                     Toast.makeText(MainActivity.this, task.getException().getMessage(),Toast.LENGTH_LONG).show();
                 }
-        });
 
-        }):
+        }
 
-   login.setOnClickListener(new View.OnClickListener() {
-       @Override
-       public void onClick(View view) {
-           startActivity(new Intent(MainActivity.this, LoginActivity.class));
 
-       }
-   });
+
+            login.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    startActivity(new Intent(MainActivity.this, LoginActivity.class));
+
+                }
+            });
     }
-    }
+
+
+}
