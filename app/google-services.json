@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "446570367238",
+    "firebase_url": "https://myproject6-c732d.firebaseio.com",
+    "project_id": "myproject6-c732d",
+    "storage_bucket": "myproject6-c732d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:446570367238:android:7eaa6c89999ce8c0383687",
+        "android_client_info": {
+          "package_name": "com.moringaschool.myproject6"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "446570367238-o5kdvk2g6o9nabl23elt8oe9m3h15vo1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.moringaschool.myproject6",
+            "certificate_hash": "648fc14a1494251042c48839bb156b443b2a5146"
+          }
+        },
+        {
+          "client_id": "446570367238-ffm83vc86tul3krjpor1d21m954qodbv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDtIl23V4swJG_lDRIGwf_ZGPtT-IPnlN0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "446570367238-ffm83vc86tul3krjpor1d21m954qodbv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
